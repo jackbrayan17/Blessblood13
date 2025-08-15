@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>On Black - Boutique</title>
+    <title>BlessBlood - Mode Urbaine</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="img/logo-removebg-preview.png" type="image/png" style="border-radius: 50%;">
+     <link rel="icon" href="img/logo-removebg-preview.png" type="image/png" style="border-radius: 50%;">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,65 +18,59 @@
         <i class="fas fa-bars menu-icon" id="menu-icon"></i>
     </header>
 
+    <div class="slider-container">
+        <div class="slider" id="product-slider">
+            <!-- Slider images will be populated by JavaScript -->
+        </div>
+        <button class="slider-arrow left-arrow" id="slider-left"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow right-arrow" id="slider-right"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
     <div class="search-container">
         <input type="text" id="search-input" placeholder="Rechercher un produit...">
     </div>
 
     <nav id="category-nav">
-        <button class="category-btn" data-type="Tous">Tous</button>
-        <button class="category-btn" data-type="Tshirts">T-Shirts</button>
-        <button class="category-btn" data-type="TankTops">Démembre</button>
-        <button class="category-btn" data-type="Caps">Chapeaux</button>
+        <button class="category-btn" data-type="All">Tous</button>
+       
+        <button class="category-btn" data-type="Jackets">Jackets</button>
     </nav>
 
-    <section class="product-grid" id="product-grid">
-        <p class="loading">Chargement des produits...</p>
-    </section>
+    <div class="product-grid" id="product-grid">
+        <div class="loading">Chargement des produits...</div>
+    </div>
 
-    <!-- Modal produit -->
     <div class="modal" id="product-modal">
         <div class="modal-content">
-            <i class="fas fa-times close-btn" id="close-modal"></i>
-            <h2 class="text-xl font-bold mb-4">Produits Sélectionnés</h2>
-            <div id="modal-product-list"></div>
-            <button id="add-to-cart" class="btn-cart">
-                <i class="fas fa-shopping-cart"></i> Ajouter au panier
-            </button>
-            <button id="whatsapp-order" class="btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Commander via WhatsApp
-            </button>
+            <h3>Produits Sélectionnés</h3>
+            <button id="btn-add-cart" class="btn-cart"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
+            <button id="btn-wa" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Commander via WhatsApp</button>
         </div>
     </div>
 
-    <!-- Modal panier -->
     <div class="cart-modal" id="cart-modal">
         <div class="cart-content">
             <i class="fas fa-times close-btn" id="close-cart"></i>
             <h3>Votre Panier</h3>
             <div id="cart-items"></div>
-            <p id="cart-total"></p>
-            <button id="whatsapp-cart-order" class="btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Valider la commande via WhatsApp
-            </button>
+            <p id="cart-total">Total : 0 FCFA</p>
+            <button id="whatsapp-cart-order" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Valider la commande via WhatsApp</button>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/onblackcmr" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@onblackcmr" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/237697336997" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
             <div class="footer-info">
-                <p>© 2025 On Black. Tous droits réservés.</p>
-                <p>Contactez-nous : <a href="mailto:contact@onblack.com">contact@onblack.com</a></p>
+                <p>&copy; 2025 BlessBlood. Tous droits réservés.</p>
+                <p>Contactez-nous : <a href="mailto:contact@blessblood.com">contact@onblack.com</a></p>
                 <p>Mode de vie élégant, directement de Yaoundé</p>
             </div>
         </div>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
