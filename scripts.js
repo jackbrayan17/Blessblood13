@@ -1,6 +1,6 @@
 /**********************
  *  ON BLACK - scripts.js
- *  Robuste au JSON mal formé + panier + WhatsApp
+ *  Robuste au JSON mal formé + panier + WhatsApp + Slider
  **********************/
 
 // === Globals ===
@@ -12,6 +12,7 @@ let searchQuery = '';
 const websiteUrl = 'https://on-black.vercel.app';
 const phone = '237697336997';
 const placeholderImage = 'img/logo.jpg';
+let sliderInterval;
 
 // === Utils: format price ===
 const fmt = n => Number(n || 0).toLocaleString('fr-FR');
@@ -31,6 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.category-btn').forEach(btn => {
     btn.addEventListener('click', () => filterByType(btn.dataset.type || 'All'));
   });
+  // Slider controls
+  document.getElementById('slider-left')?.addEventListener('click', () => slide(-1));
+  document.getElementById('slider-right')?.addEventListener('click', () => slide(1));
 
   // Close modals by clicking backdrop
   document.getElementById('product-modal')?.addEventListener('click', e => {
@@ -62,10 +66,45 @@ async function loadProducts() {
       .map(normalizeProduct)
       .filter(Boolean);
     renderProducts();
+    initSlider();
   } catch (err) {
     console.error('[Produits] Erreur:', err);
     grid.innerHTML = `<div class="error-message">Erreur: ${escapeHtml(err.message)}</div>`;
   }
+}
+
+// Initialize slider with random product images
+function initSlider() {
+  const slider = document.getElementById('product-slider');
+  if (!slider) return;
+
+  // Select up to 5 random products
+  const shuffled = [...allProducts].sort(() => 0.5 - Math.random());
+  const selected = shuffled.slice(0, Math.min(5, allProducts.length));
+  
+  slider.innerHTML = selected
+    .map(product => `<img src="${product.images[0] || placeholderImage}" alt="${escapeHtml(product.name)}">`)
+    .join('');
+
+  let currentSlide = 0;
+  const slides = slider.querySelectorAll('img');
+  const totalSlides = slides.length;
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function slide(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    updateSlider();
+  }
+
+  // Auto-slide every 5 seconds
+  clearInterval(sliderInterval);
+  sliderInterval = setInterval(() => slide(1), 5000);
+
+  // Initial display
+  updateSlider();
 }
 
 // Nettoyage + parse JSON
@@ -202,15 +241,15 @@ function toggleMenu() {
 
 function filterByType(type) {
   currentType = type || 'All';
-  // UI highlight (optionnel)
+  // UI highlight
   document.querySelectorAll('.category-btn').forEach(b => {
-    b.style.backgroundColor = '#222';
-    b.style.color = 'var(--gold)';
+    b.style.backgroundColor = 'var(--gray-dark)';
+    b.style.color = 'var(--yellow)';
   });
   const activeBtn = [...document.querySelectorAll('.category-btn')].find(b => (b.dataset.type || 'All') === currentType);
   if (activeBtn) {
-    activeBtn.style.backgroundColor = 'var(--gold)';
-    activeBtn.style.color = 'var(--black)';
+    activeBtn.style.backgroundColor = 'var(--red)';
+    activeBtn.style.color = 'var(--white)';
   }
   renderProducts();
   if (window.innerWidth <= 768) toggleMenu();
@@ -252,7 +291,7 @@ function toggleCart() {
 
   document.getElementById('cart-items').innerHTML = cart.length
     ? cart.map((p, i) => `
-      <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #333;">
+      <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid var(--light-gray);">
         <p>${escapeHtml(p.name)} (${escapeHtml(p.size)}) - ${fmt(p.price)} FCFA</p>
         <div class="quantity-control">
           <button onclick="changeQty(${i}, -1)">-</button>
@@ -266,14 +305,14 @@ function toggleCart() {
 
   document.getElementById('cart-total').textContent = `Total : ${fmt(total)} FCFA`;
 
-  // Attach WhatsApp button each time (DOM peut être reconstruit)
+  // Attach WhatsApp button each time
   const btn = document.getElementById('whatsapp-cart-order');
   if (btn) {
     btn.disabled = cart.length === 0;
     btn.onclick = whatsAppOrder;
   }
 
-  // Close button (au cas où)
+  // Close button
   document.getElementById('close-cart').onclick = () => {
     document.getElementById('cart-modal').style.display = 'none';
   };
@@ -357,8 +396,8 @@ function showProductModal(id) {
       <div class="thumbnail-container">${thumbs}</div>
       <p>${escapeHtml(product.description)}</p>
 
-      <label for="size-select" style="color: var(--gold); font-weight: 500; margin: 10px 0 6px; display: block;">Taille :</label>
-      <select id="size-select" style="background:#111;color:var(--gold);border:1px solid var(--gold);padding:8px 12px;border-radius:8px;width:100%;">
+      <label for="size-select" style="color: var(--yellow); font-weight: 500; margin: 10px 0 6px; display: block;">Taille :</label>
+      <select id="size-select" style="background:var(--gray-dark);color:var(--white);border:1px solid var(--red);padding:8px 12px;border-radius:8px;width:100%;">
         ${product.sizes.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('')}
       </select>
 
@@ -368,7 +407,7 @@ function showProductModal(id) {
         <button id="qty-plus">+</button>
       </div>
 
-      <p style="color:var(--gold);margin:6px 0;">${fmt(product.price)} FCFA</p>
+      <p style="color:var(--yellow);margin:6px 0;">${fmt(product.price)} FCFA</p>
 
       <button id="btn-add-cart" class="btn-cart"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
       <button id="btn-wa" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Commander via WhatsApp</button>
