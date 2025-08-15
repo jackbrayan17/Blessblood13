@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Black - Boutique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/logo-removebg-preview.png" type="image/png" style="border-radius: 50%;">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <i class="fas fa-shopping-cart cart-icon" id="cart-icon">
+            <span class="cart-count" id="cart-count">0</span>
+        </i>
+        <img src="img/logo.jpg" alt="On Black Logo" class="logo">
+        <i class="fas fa-bars menu-icon" id="menu-icon"></i>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Rechercher un produit...">
+    </div>
+
+    <nav id="category-nav">
+        <button class="category-btn" data-type="Tous">Tous</button>
+        <button class="category-btn" data-type="Tshirts">T-Shirts</button>
+        <button class="category-btn" data-type="TankTops">Démembre</button>
+        <button class="category-btn" data-type="Caps">Chapeaux</button>
+    </nav>
+
+    <section class="product-grid" id="product-grid">
+        <p class="loading">Chargement des produits...</p>
+    </section>
+
+    <!-- Modal produit -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <i class="fas fa-times close-btn" id="close-modal"></i>
+            <h2 class="text-xl font-bold mb-4">Produits Sélectionnés</h2>
+            <div id="modal-product-list"></div>
+            <button id="add-to-cart" class="btn-cart">
+                <i class="fas fa-shopping-cart"></i> Ajouter au panier
+            </button>
+            <button id="whatsapp-order" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Commander via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal panier -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <i class="fas fa-times close-btn" id="close-cart"></i>
+            <h3>Votre Panier</h3>
+            <div id="cart-items"></div>
+            <p id="cart-total"></p>
+            <button id="whatsapp-cart-order" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Valider la commande via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-info">
+                <p>© 2025 On Black. Tous droits réservés.</p>
+                <p>Contactez-nous : <a href="mailto:contact@onblack.com">contact@onblack.com</a></p>
+                <p>Mode de vie élégant, directement de Yaoundé</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

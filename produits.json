@@ -1,0 +1,318 @@
+[
+  {
+    "id": "1",
+    "name": "On Black Midnight Tee",
+    "price": 10000,
+    "description": "A classic black t-shirt with a subtle yet stylish logo on the chest. The 'On Black' brand is a nod to its deep, rich color. Made with a comfortable, cotton-like material, this tee is a versatile addition to any wardrobe. The back features a bold QR code and a statement of its Cameroonian origin. Be comfortable with On Black. ",
+    "stock": 50,
+    "color": "Black",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "Tshirts",
+    "images": [
+      "img/devant t-shirt noir.png",
+      "img/derriere t-shirt noir.png",
+      "img/black-tee-3.jpg",
+      "img/black-tee-hang.jpg"
+    ],
+    "attributes": "Cotton-like, classic fit, round neck, black color, white and black logo on the chest, tag with a QR code, 'WARNING' tag on the bottom right corner, 'ON BLACK ORIGINALS MADE IN CAMEROON' and a QR code on the back."
+  },
+  {
+    "id": "2",
+    "name": "On Black Mocha Tee",
+    "price": 10000,
+    "description": "This t-shirt in a warm, rich mocha brown is perfect for a relaxed, earthy look. It features the same iconic 'On Black' logo in a contrasting white, adding a clean and modern touch. The cotton-like fabric ensures all-day comfort.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Brown",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "Tshirts",
+    "images": [
+      "img/devant t-shirt marron.png",
+      "img/derriere t-shirt marron.png"
+   
+    ],
+    "attributes": "Cotton-like, classic fit, round neck, brown color, white logo on the chest, tag with a QR code, 'WARNING' tag on the bottom right corner."
+  },
+  {
+    "id": "3",
+    "name": "On Black Rosewood Tee",
+    "price": 10000,
+    "description": "A vibrant and playful t-shirt in a cheerful rose pink. The white 'On Black' logo stands out against the bright background. The soft, cotton-like material makes this a comfortable and fashionable choice.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Pink",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "Tshirts",
+    "images": [
+      "img/devant t-shirt rose.jpg",
+      "img/derriere t-shirt rose.jpg"
+
+    ],
+    "attributes": "Cotton-like, classic fit, round neck, pink color, white logo on the chest, tag with a QR code, 'WARNING' tag on the bottom right corner."
+  },
+  {
+    "id": "4",
+    "name": "On Black Scarlet Tee",
+    "price": 10000,
+    "description": "This bold and striking scarlet red t-shirt is designed to make a statement. The black 'On Black' logo provides a sharp contrast, creating a dynamic and edgy look. The material is soft and breathable for everyday wear.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Red",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "Tshirts",
+    "images": [
+      "img/devant t-shirt rouge.png",
+      "img/derriere t-shirt rouge.png"
+  
+    ],
+    "attributes": "Cotton-like, classic fit, round neck, red color, black logo on the chest, tag with a QR code, 'WARNING' tag on the bottom right corner."
+  },
+  {
+    "id": "5",
+    "name": "On Black Sunset Tee",
+    "price": 10000,
+    "description": "Capture the warmth of a sunset with this vibrant orange t-shirt. The black 'On Black' logo adds a touch of cool sophistication to the bright color. This tee is perfect for adding a pop of color to your casual outfits.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Orange",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "Tshirts",
+    "images": [
+      "img/devant t-shirt orange.png",
+      "img/derriere t-shirt orange.jpg"
+   
+    ],
+    "attributes": "Cotton-like, classic fit, round neck, orange color, black logo on the chest, tag with a QR code, 'WARNING' tag on the bottom right corner."
+  },
+  {
+    "id": "6",
+    "name": "On Black Ivory Tee",
+    "price": 10000,
+    "description": "A clean, crisp white t-shirt that serves as a timeless staple. The black 'On Black' logo creates a simple yet powerful aesthetic. Made from a soft, cotton-like fabric, this shirt is a versatile piece that can be dressed up or down.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "White",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "Tshirts",
+    "images": [
+      "img/devant t-shirt blanc.png",
+      "img/derriere t-shirt blanc.jpg",
+      "img/white-tee-4.jpg"
+  
+    ],
+    "attributes": "Cotton-like, classic fit, round neck, white/ivory color, black logo on the chest, tag with a QR code, 'WARNING' tag on the bottom right corner."
+  },
+  {
+    "id": "7",
+    "name": "On Black Ocean Tee",
+    "price": 10000,
+    "description": "Inspired by the clear waters of the ocean, this t-shirt in a refreshing blue/turquoise hue is both stylish and comfortable. The white 'On Black' logo adds a crisp and clean finish. This tee is a great way to add a calming, cool tone to your look.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Blue",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "Tshirts",
+    "images": [
+      "img/devant t-shirt bleu.png",
+      "img/derriere t-shirt bleu.png"
+
+    ],
+    "attributes": "Cotton-like, classic fit, round neck, blue/turquoise color, white logo on the chest, tag with a QR code, 'WARNING' tag on the bottom right corner."
+  },
+  {
+    "id": "8",
+    "name": "On Black Midnight Tank",
+    "price": 5000,
+    "description": "A sleek and simple black tank top, perfect for a minimalist look. The classic fit and comfortable fabric make it an ideal choice for warm weather or as a layering piece. The subtle 'On Black' text logo is a stylish detail.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Black",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "TankTops",
+    "images": [
+      "img/demem-noir.jpg",
+      "img/demem-noir-dual.jpg"
+
+    ],
+    "attributes": "Tank top, classic fit, round neck, black color, 'On Black' text logo on the chest."
+  },
+  {
+    "id": "9",
+    "name": "On Black Charcoal Tank",
+    "price": 5000,
+    "description": "This heather grey tank top offers a versatile and modern aesthetic. The soft, breathable material is perfect for active days, while the 'On Black' text logo adds a touch of brand recognition.Be confortable with On Black.",
+    "stock": 50,
+    "color": "Grey",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "TankTops",
+    "images": [
+      "img/demem-gris.jpg",
+      "img/demem-gris-dual.jpg"
+
+    ],
+    "attributes": "Tank top, classic fit, round neck, grey color, 'On Black' text logo on the chest."
+  },
+  {
+    "id": "10",
+    "name": "On Black Ivory Tank",
+    "price": 5000,
+    "description": "A crisp and clean white tank top, an essential piece for any wardrobe. The simple 'On Black' text logo is a classic touch. The lightweight fabric ensures comfort and style for any casual occasion.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "White",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "TankTops",
+    "images": [
+      "img/demem-blanc.jpg",
+      "img/demem-blanc-dual.jpg",
+      "img/demem-white-hang.jpg"
+    
+    ],
+    "attributes": "Tank top, classic fit, round neck, white color, 'On Black' text logo on the chest."
+  },
+  {
+    "id": "11",
+    "name": "On Black Onyx Icon Tank",
+    "price": 5000,
+    "description": "This black tank top features a bold white 'On Black' graphic logo, giving it a more modern and edgy feel. The comfortable material and classic fit make it a great choice for both casual wear and workouts.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Black",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "TankTops",
+    "images": [
+      "img/demem-noir.jpg",
+      "img/demem-noir-dual.jpg"
+     
+    ],
+    "attributes": "Tank top, classic fit, round neck, black color, white 'On Black' graphic logo on the chest."
+  },
+  {
+    "id": "12",
+    "name": "On Black Granite Icon Tank",
+    "price": 5000,
+    "description": "A stylish heather grey tank top with the distinctive 'On Black' graphic logo in white. The contrasting colors create a clean and contemporary look. The breathable fabric is perfect for staying cool and comfortable.",
+    "stock": 50,
+    "color": "Grey",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "TankTops",
+    "images": [
+      "img/demem-gris.jpg",
+      "img/demem-gris-dual.jpg"
+   
+    ],
+    "attributes": "Tank top, classic fit, round neck, grey color, white 'On Black' graphic logo on the chest."
+  },
+  {
+    "id": "13",
+    "name": "On Black Burgundy Trucker Cap",
+    "price": 5000,
+    "description": "This classic trucker cap features a deep burgundy front panel and a breathable white mesh back, making it a stylish and comfortable accessory for any casual outfit. The white 'On Black' logo is embroidered on the front, adding a touch of brand identity.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Burgundy",
+    "sizes": ["OneSize"],
+    "type": "Caps",
+    "images": [
+      "img/redwine-cap.jpg"
+    
+    ],
+    "attributes": "Trucker style cap, mesh back, burgundy front panel, white mesh, white 'On Black' logo on the front."
+  },
+  {
+    "id": "14",
+    "name": "On Black Sunset Trucker Cap",
+    "price": 5000,
+    "description": "A vibrant orange cap that evokes the feeling of a warm, sunny day. The bright color is complemented by a white mesh back for ventilation and a clean white 'On Black' logo. This cap is perfect for adding a bold pop of color to your look.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Orange",
+    "sizes": ["OneSize"],
+    "type": "Caps",
+    "images": [
+      "img/orange cap.jpg"
+
+    ],
+    "attributes": "Trucker style cap, mesh back, bright orange front panel, white mesh, white 'On Black' logo on the front."
+  },
+  {
+    "id": "15",
+    "name": "On Black Royal Blue Trucker Cap",
+    "price": 5000,
+    "description": "This cap features a striking royal blue front panel and a crisp white mesh back, offering a fresh and clean aesthetic. The white 'On Black' logo stands out, making this a great choice for a classic, sporty style.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Blue",
+    "sizes": ["OneSize"],
+    "type": "Caps",
+    "images": [
+      "img/blue-cap.jpg"
+    
+    ],
+    "attributes": "Trucker style cap, mesh back, royal blue front panel, white mesh, white 'On Black' logo on the front."
+  },
+  {
+    "id": "16",
+    "name": "On Black Forest Green Trucker Cap",
+    "price": 5000,
+    "description": "A sophisticated dark green cap with a clean white mesh back. This cap offers a more understated and earthy tone while still maintaining a sharp look. The white 'On Black' logo provides a nice contrast against the deep green color.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "Green",
+    "sizes": ["OneSize"],
+    "type": "Caps",
+    "images": [
+      "img/green-cap.jpg"
+
+    ],
+    "attributes": "Trucker style cap, mesh back, dark green front panel, white mesh, white 'On Black' logo on the front."
+  },
+  {
+    "id": "18",
+    "name": "On Black White Tee",
+    "price": 10000,
+    "description": "A clean, crisp white t-shirt with a black 'On Black' logo on the chest. The back also features a QR code and 'ON BLACK ORIGINALS MADE IN CAMEROON' text. It's made from a soft, cotton-like fabric.Be comfortable with On Black.",
+    "stock": 50,
+    "color": "White",
+    "sizes": ["XL", "XXL", "XXXL"],
+    "type": "Tshirts",
+    "images": [
+      "img/whitetee.jpg",
+      "img/whitetee.jpg"
+    ],
+    "attributes": "Cotton-like, classic fit, round neck, white color, black logo on the chest, tag with a QR code, 'WARNING' tag on the bottom right corner."
+  },
+  {
+    "id": "19",
+    "name": "On Black TankTop",
+    "price": 5000,
+    "description": "A clean, crisp white t-shirt with a black 'On Black' logo on the chest. The back also features a QR code and 'ON BLACK ORIGINALS MADE IN CAMEROON' text. It's made from a soft, cotton-like fabric.Be comfortable with On Black.",
+    "stock": 50,
+    "color": ["White","Grey","Black"],
+    "sizes": ["XL", "XXL"],
+    "type": "Tshirts",
+    "images": [
+      "img/3-2tank.jpg",
+      
+    ],
+    "attributes": "Cotton-like, classic fit, round neck, white color, black logo on the chest, tag with a QR code, 'WARNING' tag on the bottom right corner."
+  }
+  ,
+  {
+    "id": "20",
+    "name": "On Black Trucker Cap",
+    "price": 5000,
+    "description": "This monochrome cap is a versatile and timeless accessory. The entire cap is a clean white, with the 'On Black' logo embroidered in a contrasting black for a bold and modern finish. It's an essential piece for a minimalist or street-style look.Be comfortable with On Black.",
+    "stock": 50,
+    "color": ["Orange","Brown","Green","White","Red"],
+    "sizes": ["OneSize"],
+    "type": "Caps",
+    "images": [
+      "img/allcap.jpg"     
+    ],
+    "attributes": "All-white cap, trucker style cap, mesh back, white front panel and mesh, black 'On Black' logo on the front."
+  },
+  {
+    "id": "21",
+    "name": "On Black TankTop",
+    "price": 5000,
+    "description": "A clean, crisp white t-shirt with a black 'On Black' logo on the chest. The back also features a QR code and 'ON BLACK ORIGINALS MADE IN CAMEROON' text. It's made from a soft, cotton-like fabric.Be comfortable with On Black.",
+    "stock": 50,
+    "color": ["White"],
+    "sizes": ["XL", "XXL"],
+    "type": "Tshirts",
+    "images": [
+      "img/whitetank.jpg",
+      
+    ],
+    "attributes": "Cotton-like, classic fit, round neck, white color, black logo on the chest, tag with a QR code, 'WARNING' tag on the bottom right corner."
+  }
+  ,
+]
