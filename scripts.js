@@ -9,7 +9,7 @@ let selectedProduct = null;
 let allProducts = [];
 let currentType = 'All';
 let searchQuery = '';
-const websiteUrl = 'https://blessblood13.vercel.app';
+const websiteUrl = 'https://blessblood.vercel.app';
 const phone = '237694103585';
 const placeholderImage = 'img/logo.jpg';
 let sliderInterval;
@@ -73,16 +73,13 @@ async function loadProducts() {
   }
 }
 
-// Initialize slider with random product images
+// Initialize slider with all product images
 function initSlider() {
   const slider = document.getElementById('product-slider');
   if (!slider) return;
 
-  // Select up to 5 random products
-  const shuffled = [...allProducts].sort(() => 0.5 - Math.random());
-  const selected = shuffled.slice(0, Math.min(5, allProducts.length));
-  
-  slider.innerHTML = selected
+  // Use first image from all products
+  slider.innerHTML = allProducts
     .map(product => `<img src="${product.images[0] || placeholderImage}" alt="${escapeHtml(product.name)}">`)
     .join('');
 
