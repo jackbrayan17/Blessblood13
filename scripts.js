@@ -9,8 +9,8 @@ let selectedProduct = null;
 let allProducts = [];
 let currentType = 'All';
 let searchQuery = '';
-const websiteUrl = 'https://on-black.vercel.app';
-const phone = '237697336997';
+const websiteUrl = 'https://blessblood13.vercel.app';
+const phone = '237694103585';
 const placeholderImage = 'img/logo.jpg';
 let sliderInterval;
 
