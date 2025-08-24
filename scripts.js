@@ -9,7 +9,7 @@ let selectedProduct = null;
 let allProducts = [];
 let currentType = 'All';
 let searchQuery = '';
-const websiteUrl = 'https://blessblood.vercel.app';
+const websiteUrl = 'https://blessblood13.vercel.app';
 const phone = '237694103585';
 const placeholderImage = 'img/logo.jpg';
 let sliderInterval;
@@ -344,7 +344,7 @@ function whatsAppOrder() {
   if (!cart.length) return;
   const total = cart.reduce((s, p) => s + p.price * p.quantity, 0);
   const message =
-    `🌟 *On Black - Votre Commande* 🌟\n\n` +
+    `🌟 BLessblooD - Votre Commande* 🌟\n\n` +
     `📋 *Récapitulatif :*\n` +
     cart.map((p, i) =>
       `${i + 1}. ${p.name}\n   Taille: ${p.size}\n   Quantité: ${p.quantity}\n   Prix: ${fmt(p.price * p.quantity)} FCFA`
@@ -362,7 +362,7 @@ function whatsAppSingleOrder() {
   const quantity = parseInt(document.getElementById('modal-quantity')?.textContent || '1', 10) || 1;
   const total = p.price * quantity;
   const message =
-    `🌟 *On Black - Commande Produit* 🌟\n\n` +
+    `🌟 *BlessblooD - Commande Produit* 🌟\n\n` +
     `Article: ${p.name}\n` +
     `Description: ${p.description}\n` +
     `Taille: ${size}\n` +
