@@ -73,34 +73,37 @@ async function loadProducts() {
   }
 }
 
-// Initialize slider with all product images
+let currentSlide = 0;
+let slides, totalSlides;
+
 function initSlider() {
   const slider = document.getElementById('product-slider');
   if (!slider) return;
 
-  // Use first image from all products
+  // Inject images
   slider.innerHTML = allProducts
     .map(product => `<img src="${product.images[0] || placeholderImage}" alt="${escapeHtml(product.name)}">`)
     .join('');
 
-  let currentSlide = 0;
-  const slides = slider.querySelectorAll('img');
-  const totalSlides = slides.length;
+  slides = slider.querySelectorAll('img');
+  totalSlides = slides.length;
+  currentSlide = 0;
 
-  function updateSlider() {
-    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-  }
+  updateSlider();
 
-  function slide(direction) {
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    updateSlider();
-  }
-
-  // Auto-slide every 5 seconds
+  // Auto défilement
   clearInterval(sliderInterval);
   sliderInterval = setInterval(() => slide(1), 5000);
+}
 
-  // Initial display
+function updateSlider() {
+  const slider = document.getElementById('product-slider');
+  if (!slider) return;
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function slide(direction) {
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
   updateSlider();
 }
 
